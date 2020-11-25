@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sa-frontend
+  labels:
+    app: sa-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sa-frontend
+  template:
+    metadata:
+      labels:
+        app: sa-frontend
+    spec:
+      containers:
+        - name: sa-frontend
+          image: rishijatania/sentiment-analysis-frontend:minikube
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

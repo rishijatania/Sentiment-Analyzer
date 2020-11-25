@@ -1,0 +1,5 @@
+Flask==0.12.2 
+textblob==0.15.0
+werkzeug<1.0
+flask_cors==3.0.9
+requests
